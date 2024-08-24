@@ -1,0 +1,366 @@
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #333;
+  color: #e0f2f1;
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+/* Header and Navigation */
+.header {
+  background-color: #2b1c1c;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.blog-title {
+  font-size: 2.5rem;
+  margin: 0;
+  text-shadow: 4px 4px 10px #f0f3f0;
+}
+
+.blog-title a {
+  color: #d9e8d9;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav ul li {
+  font-size: 1.5rem;
+  margin-left: 20px;
+}
+
+.nav ul li a {
+  color: #d9e8d9;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Main Content */
+main {
+  padding: 20px;
+  background-color: #d9e8d9;
+}
+
+.post-list {
+  margin-top: 20px;
+}
+
+.post {
+  background-color: #ffffff;
+  color: #333;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-left: 5px solid #2b1c1c;
+  border-radius: 3px;
+}
+
+.post-header {
+  background: #3e2723; 
+  color: white;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.post-header h1 {
+  margin: 0;
+}
+
+.post-date {
+  font-size: 0.9em;
+  color: #ccc;
+}
+
+.post-content {
+  background: #f9f9f9;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+.post-title {
+  font-size: 24px;
+  margin: 0;
+  cursor: pointer;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+/* Comments and Add Comment */
+.comment {
+  margin-bottom: 20px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.comment-header {
+  margin-bottom: 10px;
+}
+
+.comment-date {
+  font-size: 0.875rem;
+  color: #666;
+}
+
+.add-comment {
+  margin-top: 20px;
+}
+
+.add-comment textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.add-comment button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+}
+
+.add-comment button:hover {
+  background-color: #0056b3;
+}
+#comments-list li {
+  margin-bottom: 15px; 
+}
+.comments li {
+  margin-bottom: 0.5rem;
+}
+
+/* Footer */
+footer {
+  padding: 10px 20px;
+  text-align: center;
+  background-color: #2b1c1c;
+  color: white;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Forms and Buttons */
+.login-container,
+.signup-form {
+  background-color: #cfd8dc;
+  padding: 20px;
+  margin: 50px auto;
+  width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.btn-login,
+.btn-signup {
+  background-color: #757575;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.btn-login:hover,
+.btn-signup:hover {
+  background-color: #616161;
+}
+
+.login-link,
+.signup-link {
+  margin-top: 20px;
+}
+
+.login-link a,
+.signup-link a {
+  color: #1565c0;
+  text-decoration: none;
+}
+
+.login-link a:hover,
+.signup-link a:hover {
+  text-decoration: underline;
+}
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed; 
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgba(0, 0, 0, 0.5); 
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 5% auto; 
+  padding: 30px;
+  border: 1px solid #888;
+  width: 90%;
+  max-width: 800px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.close-button {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Buttons */
+.btn-primary {
+  background-color:#3e2723;
+  color: white;
+  padding: 15px 30px;
+  font-size: 20px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  color: white;
+  padding: 15px 30px;
+  font-size: 18px;
+  border-radius: 8px;
+}
+
+.btn-secondary:hover {
+  background-color: #5a6268;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  color: white;
+  padding: 15px 30px;
+  font-size: 18px;
+  border-radius: 8px;
+}
+
+.btn-danger:hover {
+  background-color: #c82333;
+}
+
+#new-post-modal h3, 
+#edit-post-modal h3 {
+  color:#000; 
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  margin-bottom: 20px; 
+}
+.edit-post-button {
+  background-color: #757575;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.edit-post-button:hover {
+  background-color: #616161;
+}
+
+/* Form Fields */
+#edit-post-form input[type="text"],
+#edit-post-form textarea,
+#new-post-form input[type="text"],
+#new-post-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+#edit-post-form textarea,
+#new-post-form textarea {
+  resize: vertical;
+  min-height: 200px;
+}
+
+#edit-post-form input[type="text"]::placeholder,
+#edit-post-form textarea::placeholder {
+  color: #999;
+}

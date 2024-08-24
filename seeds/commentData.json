@@ -1,0 +1,17 @@
+[
+  {
+    "content": "Great post! I really found this helpful.",
+    "userId": 2,
+    "postId": 1
+  },
+  {
+    "content": "I always mix these up! Thanks for clarifying.",
+    "userId": 3,
+    "postId": 2
+  },
+  {
+    "content": "ORMs are indeed amazing!",
+    "userId": 1,
+    "postId": 3
+  }
+]

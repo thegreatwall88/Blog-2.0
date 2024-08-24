@@ -1,0 +1,50 @@
+{{#if logged_in}}
+<div class="dashboard-posts">
+  {{#each posts}}
+    <div class="post">
+      <div class="post-header">
+        <h3 class="post-title" onclick="openEditModal('{{id}}', '{{title}}', '{{content}}')">{{title}}</h3>
+        <span class="post-date">{{updatedAt}}</span>
+      </div>
+    </div>
+  {{/each}}
+</div>
+
+<div class="new-post-section">
+  <button class="btn-primary" onclick="openNewPostModal()"> + New Post</button>
+</div>
+
+<div id="new-post-modal" class="modal">
+  <div class="modal-content">
+    <span class="close-button" onclick="closeNewPostModal()">&times;</span>
+    <h3>New Post</h3>
+    <form id="new-post-form" onsubmit="addPost(event)">
+      <input type="text" name="title" placeholder="Title" required />
+      <textarea name="content" placeholder="Content" required></textarea>
+      <div class="form-buttons">
+        <button type="submit" class="btn btn-primary">Add Post</button>
+        <button type="button" class="btn btn-secondary" onclick="closeNewPostModal()">Cancel</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div id="edit-post-modal" class="modal">
+  <div class="modal-content">
+    <span class="close-button" onclick="closeEditModal()">&times;</span>
+    <h3>Edit Post</h3>
+    <form id="edit-post-form" action="" method="POST">
+      <input type="text" name="title" id="edit-post-title" placeholder="Title" required />
+      <textarea name="content" id="edit-post-content" placeholder="Content" required></textarea>
+      <div class="form-buttons">
+        <button type="submit" class="btn btn-secondary">Update Post</button>
+        <button type="button" class="btn btn-danger" onclick="deletePost()">Delete Post</button>
+        <button type="button" class="btn btn-secondary" onclick="closeEditModal()">Cancel</button>
+      </div>
+    </form>
+  </div>
+</div>
+{{else}}
+  <p>You must be logged in to view this page. <a href="/login">Log in</a></p>
+{{/if}}
+<script src="/js/dashboard.js"></script>
