@@ -20,7 +20,7 @@
     {{#if logged_in}}
     <section class="add-comment">
         <h3>Leave a Comment</h3>
-        <form id="add-comment-form" data-post-id="{{postID}}" data-user-id="{{../user.id}}">
+        <form id="add-comment-form" data-post-id="{{postID}}">
             <textarea name="comment" rows="5" placeholder="Your comment here" required></textarea><br>
             <button type="submit">Post Comment</button>
         </form>
@@ -29,3 +29,4 @@
     <p>You must be logged in to comment. <a href="/login">Log in</a></p>
     {{/if}}
 </div>
+<script src="/js/post.js"></script>

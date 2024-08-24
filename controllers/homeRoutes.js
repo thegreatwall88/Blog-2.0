@@ -64,7 +64,7 @@ router.get('/post/:id', async (req, res) => {
         day: 'numeric',
       }),
       logged_in: req.session.logged_in,
-      url: req.originalUrl
+      user: req.session.user,
     });
   } catch (err) {
     console.log(err);
@@ -77,7 +77,7 @@ router.post('/post/:id/comment', async (req, res) => {
     if (!req.session.logged_in) {
       return res.status(401).json({ message: 'You need to be logged in to comment.' });
     }
-
+  
     const newComment = await Comment.create({
       content: req.body.content,
       user_id: req.session.user_id, 
