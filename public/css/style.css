@@ -61,6 +61,7 @@ main {
   background-color: #d9e8d9;
 }
 
+/* Post Styles */
 .post-list {
   margin-top: 20px;
 }
@@ -109,15 +110,19 @@ main {
 
 /* Comments and Add Comment */
 .comment {
-  margin-bottom: 20px;
-  padding: 15px;
+  margin-bottom: 16px;
+  padding: 12px;
   border: 1px solid #ddd;
-  border-radius: 5px;
+  border-radius: 4px;
   background-color: #fff;
 }
 
 .comment-header {
-  margin-bottom: 10px;
+  margin-bottom: 8px;
+}
+
+.comment-content {
+  margin: 0;
 }
 
 .comment-date {
@@ -148,11 +153,26 @@ main {
 .add-comment button:hover {
   background-color: #0056b3;
 }
-#comments-list li {
-  margin-bottom: 15px; 
+
+/* Delete Comment Button */
+.delete-comment-btn {
+  background-color: #f44336;
+  color: white;
+  border: none; 
+  padding: 4px 8px; 
+  font-size: 12px;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: background-color 0.3s;
 }
-.comments li {
-  margin-bottom: 0.5rem;
+
+.delete-comment-btn:hover {
+  background-color: #d32f2f;
+}
+
+.delete-comment-btn:focus {
+  outline: none; 
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.2);
 }
 
 /* Footer */
@@ -274,7 +294,7 @@ input[type="password"] {
 
 /* Buttons */
 .btn-primary {
-  background-color:#3e2723;
+  background-color: #3e2723;
   color: white;
   padding: 15px 30px;
   font-size: 20px;
@@ -312,14 +332,17 @@ input[type="password"] {
   background-color: #c82333;
 }
 
+/* Modals */
 #new-post-modal h3, 
 #edit-post-modal h3 {
-  color:#000; 
+  color: #000; 
   padding: 10px;
   border-radius: 5px;
   text-align: center;
   margin-bottom: 20px; 
 }
+
+/* Post Edit Button */
 .edit-post-button {
   background-color: #757575;
   color: #fff;
@@ -363,4 +386,26 @@ input[type="password"] {
 #edit-post-form input[type="text"]::placeholder,
 #edit-post-form textarea::placeholder {
   color: #999;
+}
+.notification {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 15px;
+  border: 1px solid #f5c6cb;
+  border-radius: 5px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.notification a {
+  color: #155724;
+  text-decoration: underline;
+}
+
+.notification a:hover {
+  text-decoration: none;
 }

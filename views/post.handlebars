@@ -1,4 +1,4 @@
-<div class="post">
+<div class="post" >
     <div class="post-header">
         <h1 class="post-title">{{title}}</h1>
         <span class="post-date">Posted by {{user.name}} on {{created_at}}</span>
@@ -8,10 +8,12 @@
     <section id="comments-section">
         <h3>Comments</h3>
         {{#each comments}}
-        <div class="comment">
+        <div class="comment" data-comment-id="{{this.id}}" data-comment-user-id="{{this.user.id}}">
             <div class="comment-header">
                 <p class="comment-content">{{this.content}}</p>
                 <span class="comment-date">— <strong>{{this.user.name}}</strong>, {{this.createdAt}}</span>
+                <button class="delete-comment-btn">Delete</button>
+
             </div>
         </div>
         {{/each}}
@@ -26,7 +28,9 @@
         </form>
     </section>
     {{else}}
-    <p>You must be logged in to comment. <a href="/login">Log in</a></p>
+    <div id="comment-notification" class="notification">
+        You must be logged in to comment. <a href="/login">Log in</a>
+    </div>
     {{/if}}
 </div>
 <script src="/js/post.js"></script>

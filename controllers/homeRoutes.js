@@ -100,6 +100,33 @@ router.post('/post/:id/comment', async (req, res) => {
   }
 });
 
+router.get('/user-id', (req, res) => {
+  if (req.session.logged_in) {
+    res.json({ user_id: req.session.user_id });
+  } else {
+    res.status(401).json({ message: 'User not logged in' });
+  }
+});
+
+router.delete('/comment/:id', withAuth, async (req, res) => {
+  try {
+    const comment = await Comment.findByPk(req.params.id);
+
+    if (!comment) {
+      return res.status(404).json({ message: 'Comment not found' });
+    }
+
+    if (comment.user_id !== req.session.user_id) {
+      return res.status(403).json({ message: 'You are not authorized to delete this comment' });
+    }
+
+    await comment.destroy();
+    res.status(200).json({ message: 'Comment deleted successfully' });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
 
 router.get('/dashboard', withAuth, async (req, res) => {
   
