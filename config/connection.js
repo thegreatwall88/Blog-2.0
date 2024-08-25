@@ -12,7 +12,7 @@ if (process.env.DB_URL) {
     process.env.DB_PASSWORD,
     {
       host: '127.0.0.1',
-      port: 5432,
+      port: 8488,
       dialect: 'postgres'
     }
   );
