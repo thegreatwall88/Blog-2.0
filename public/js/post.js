@@ -61,12 +61,12 @@ document.addEventListener('DOMContentLoaded', async () => {
             });
 
             if (response.ok) {
-              commentElement.remove(); // Remove the comment from the DOM
+              commentElement.remove(); 
               alert('Comment deleted successfully.');
             } else if (response.status === 403) {
               alert('You are not authorized to delete this comment.');
             } else if (response.status === 404) {
-              alert('Comment not found.');
+              alert('You need to log in to delete comment.');
             } else {
               alert('Failed to delete the comment.');
             }
