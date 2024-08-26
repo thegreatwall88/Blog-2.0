@@ -387,6 +387,8 @@ input[type="password"] {
 #edit-post-form textarea::placeholder {
   color: #999;
 }
+
+/* Notification */
 .notification {
   background-color: #f8d7da;
   color: #721c24;
@@ -408,4 +410,97 @@ input[type="password"] {
 
 .notification a:hover {
   text-decoration: none;
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .blog-title {
+    font-size: 2rem;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .nav ul li {
+    margin: 10px 0;
+  }
+
+  main {
+    padding: 15px;
+  }
+
+  .post {
+    padding: 15px;
+  }
+
+  .post-title {
+    font-size: 20px;
+  }
+
+  .btn-primary,
+  .btn-secondary,
+  .btn-danger {
+    padding: 12px 20px;
+    font-size: 16px;
+  }
+
+  .login-container,
+  .signup-form {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .header {
+    padding: 10px;
+  }
+
+  .blog-title {
+    font-size: 1.8rem;
+  }
+
+  .nav ul {
+    padding-left: 0;
+  }
+
+  .nav ul li {
+    font-size: 1.2rem;
+  }
+
+  main {
+    padding: 10px;
+  }
+
+  .post {
+    padding: 10px;
+  }
+
+  .post-title {
+    font-size: 18px;
+  }
+
+  .btn-primary,
+  .btn-secondary,
+  .btn-danger {
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+
+  .login-container,
+  .signup-form {
+    width: 100%;
+  }
+
+  .modal-content {
+    width: 95%;
+    padding: 20px;
+  }
 }
